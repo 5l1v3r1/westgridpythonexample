@@ -15,6 +15,7 @@ To run the example job use the following command
 ```
 qsub batchjob.pbs
 ```
+The supplied job takes more than an hour to complete, it uses the theano.test() functionality.
 
 ### Specifying parameters
 
@@ -54,4 +55,20 @@ Once a job has been submitted, it will take a moment to be put into the Queue, h
 And here is a job which is currently active:
 
 ![alt tag](http://imgur.com/k6vXecc.png)
+
+## Viewing the Output
+Once a job has finished it will provide two files in the directory under which it was called. These files are of the form:
+
+```
+batchjob.pbs.e<job ID>
+```
+and
+```
+batchjob.pbs.o<job ID>
+```
+
+The result with the o prefix is the output of the job, the result with the e prefix is something else that I am not quite sure about yet a.k.a TBD.
+
+
+
 
