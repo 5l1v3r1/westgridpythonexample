@@ -67,7 +67,7 @@ and
 batchjob.pbs.o<job ID>
 ```
 
-The result with the o prefix is the output of the job, the result with the e prefix is something else that I am not quite sure about yet a.k.a TBD.
+The result with the o prefix is the output of the job, the result with the e prefix is the error output.
 
 
 
