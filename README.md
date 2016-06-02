@@ -24,3 +24,24 @@ qsub -l walltime=72:00:00,mem=1500mb,nodes=4 diffuse.pbs
 ```
 
 For advanced usage refer to http://www.democritos.it/activities/IT-MC/documentation/newinterface/pages/runningcodes.html
+
+## Viewing Job Status
+
+It is often necessary to view the status of jobs once they've been started.
+
+To view all jobs currently processing use the following command:
+```
+showq
+```
+
+To view your own jobs use the following command:
+```
+qsub -l walltime=72:00:00,mem=1500mb,nodes=4 diffuse.pbs
+```
+
+Once a job has been submitted, it will take a moment to be put into the Queue, here is an example of a task in the waiting queue:
+![alt tag](http://imgur.com/5EcAWrE.png)
+
+And here is a job which is currently active:
+![alt tag](http://imgur.com/k6vXecc.png)
+
