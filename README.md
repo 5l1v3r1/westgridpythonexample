@@ -8,10 +8,15 @@ In order to run the script on West Grid you must have access to West Grid, and t
 
 ## Running & Specifying Job Parameters
 
+The following sections outline basic running of a job as well as specifying job parameters.
+
+### Running a job
 To run the example job use the following command
 ```
 qsub batchjob.pbs
 ```
+
+### Specifying parameters
 
 To specify the timeout period (default 3 hours), memory used, and number of processors use the following command:
 ```
@@ -29,19 +34,24 @@ For advanced usage refer to http://www.democritos.it/activities/IT-MC/documentat
 
 It is often necessary to view the status of jobs once they've been started.
 
+### View all jobs
 To view all jobs currently processing use the following command:
 ```
 showq
 ```
 
+### View your jobs
 To view your own jobs use the following command:
 ```
-qsub -l walltime=72:00:00,mem=1500mb,nodes=4 diffuse.pbs
+showq -u username
 ```
 
+### Example output
 Once a job has been submitted, it will take a moment to be put into the Queue, here is an example of a task in the waiting queue:
+
 ![alt tag](http://imgur.com/5EcAWrE.png)
 
 And here is a job which is currently active:
+
 ![alt tag](http://imgur.com/k6vXecc.png)
 
