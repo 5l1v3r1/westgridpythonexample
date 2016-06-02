@@ -1,0 +1,15 @@
+#!/bin/bash 
+#PBS -S /bin/bash 
+ 
+# Script for running example python batch job
+ 
+cd $PBS_O_WORKDIR 
+echo "Current working directory is `pwd`" 
+ 
+echo "Load the required module for Theano on Grex" 
+module load python/2.7.5.anaconda
+ 
+echo "Starting run at: `date`" 
+python testTheano.py 
+
+echo "Job finished with exit code $? at: `date`"
