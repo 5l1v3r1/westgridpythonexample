@@ -8,8 +8,16 @@ echo "Current working directory is `pwd`"
  
 echo "Load the required module for Theano on Grex" 
 module load python/2.7.5.anaconda
- 
-echo "Starting run at: `date`" 
-python testTheano.py 
+
+mail -s "Job Started" "example@example.com" << END_MAIL
+Job Began at `date`, good luck and may the force be with you.
+END_MAIL
+
+echo "Starting run at: `date`"
+python <path to python script>
+
+mail -s "Job Finished" "example@example.com" << END_MAIL
+Job finished with exit code $? at :`date`
+END_MAIL
 
 echo "Job finished with exit code $? at: `date`"
